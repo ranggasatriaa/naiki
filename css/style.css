@@ -714,7 +714,7 @@ margin-top:1em;
 margin-top:1em;
 }
 .howto-i1{
-background:url(../images/sprits.png) no-repeat -161px -10px;
+background:url(../images/sprits2.svg) no-repeat -10px -21px;
 width:56px;
 height:35px;
 display:inline-block;
@@ -722,10 +722,10 @@ margin-top: 15px;
 margin-bottom:1em;
 }
 .active .howto-i1{
-background:url(../images/sprits.png) no-repeat -52px -10px;
+background:url(../images/sprits2.svg) no-repeat -10px -108px;
 }
 .howto-i2{
-background:url(../images/sprits.png) no-repeat -161px -10px;
+background:url(../images/sprits2.svg) no-repeat -80px -21px;
 width:56px;
 height:35px;
 display:inline-block;
@@ -733,10 +733,10 @@ margin-top: 15px;
 margin-bottom:1em;
 }
 .active .howto-i2{
-background:url(../images/sprits.png) no-repeat -52px -10px;
+background:url(../images/sprits2.svg) no-repeat -80px -108px;
 }
 .howto-i3{
-background:url(../images/sprits.png) no-repeat -161px -10px;
+background:url(../images/sprits2.svg) no-repeat -154px -21px;
 width:56px;
 height:35px;
 display:inline-block;
@@ -744,10 +744,10 @@ margin-top: 15px;
 margin-bottom:1em;
 }
 .active .howto-i3{
-background:url(../images/sprits.png) no-repeat -52px -10px;
+background:url(../images/sprits2.svg) no-repeat -154px -108px;
 }
 .howto-i4{
-background:url(../images/sprits.png) no-repeat -161px -10px;
+background:url(../images/sprits2.svg) no-repeat -222px -21px;
 width:56px;
 height:35px;
 display:inline-block;
@@ -755,7 +755,7 @@ margin-top: 15px;
 margin-bottom:1em;
 }
 .active .howto-i4{
-background:url(../images/sprits.png) no-repeat -52px -10px;
+background:url(../images/sprits2.svg) no-repeat -222px -108px;
 }
 /*-0---*/
 .contact{
