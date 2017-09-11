@@ -5,6 +5,36 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
+<?php
+	if(isset($_POST['submit'])){
+		error_reporting(-1);
+		ini_set('display_errors', 'On');
+		set_error_handler("var_dump");
+	//    ini_set( 'display_errors', 1 );
+		//  error_reporting( E_ALL );
+
+			$from = "official@naiki.id";    //email tergantung hostinger
+			//$from = ($_POST['email']);    //email tergantung hostinger
+			$to = "ranggasatriaa@gmail.com";
+			$subject = 'Request: '.($_POST['nama']); //subject
+			$message = '<html><body>';
+			$message .= 'Email: ';
+			$message .= ($_POST['email']);
+			$message .= '<br><br>Pesan: <br>';
+			$message .= ($_POST['pesan']);
+			$message .= '</body></html>';
+			$headers = "From:" . strip_tags($from) . "\r\n";
+			$headers .= "MIME-Version: 1.0\r\n";
+			$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+			//mail($to,$subject,$message, $headers);
+			if(mail($to, $subject, $message, $headers)){
+				//return complete();
+				echo 'SUCCESS: Pesan anda berhasil di kirim. <a href="index.php">Kembali</a>';
+			}else{
+				echo 'ERROR: Pesan anda gagal di kirim silahkan coba lagi. <a href="index.php">Kembali</a>';
+			}
+		}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -627,11 +657,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		 </div>
 		 <div class="col-md-6 hello-grid-form">
 			 <h3>Email Kami</h3>
-			 <form>
-				 <li class="text"><input type="text" placeholder="Nama Kamu" required/><div class="p1"></div></li>
-				 <li class="text"><input type="text" placeholder="Email Kamu" required/><div class="p2"></div></li>
-				 <li class="text"><textarea placeholder="Pesan Kamu"></textarea></li>
-				 <input type="submit" value="Kirim Pesan"/>
+			 <form action="index.php" method="post">
+				 <li class="text"><input type="text" name="nama" placeholder="Nama Kamu" required/><div class="p1"></div></li>
+				 <li class="text"><input type="email" name="email" placeholder="Email Kamu" required/><div class="p2"></div></li>
+				 <li class="text"><textarea name="pesan" placeholder="Pesan Kamu"></textarea></li>
+				 <input type="submit" name="submit" value="Kirim Pesan"/>
+				 <input type="reset" value="Reset"/>
 			 </form>
 		 </div>
 		 <div class="clearfix"></div>
